@@ -56,6 +56,8 @@ class TestClassDataDetailViewHandler
 		'addressfields' => ['Vorname', 'Name'],
 		'movielinks' => MovieLinkTypes::MOVIE_LINKS_PLAYER,
 		'similar_estates_template' => '/test/similar/template.php',
+		'hide_sold' => true,
+		'hide_reserved' => true,
 		'same_kind' => true,
 		'same_maketing_method' => true,
 		'radius' => 35,
@@ -83,6 +85,8 @@ class TestClassDataDetailViewHandler
 		$this->assertEquals($row['enablesimilarestates'], $pDataDetailview->getDataDetailViewActive());
 		$pDataSimilar = $pDataDetailview->getDataViewSimilarEstates();
 
+		$this->assertEquals($row['hide_sold'], $pDataSimilar->getHideSoldEstates());
+		$this->assertEquals($row['hide_reserved'], $pDataSimilar->getHideReservedEstates());
 		$this->assertEquals($row['same_kind'], $pDataSimilar->getSameEstateKind());
 		$this->assertEquals($row['same_maketing_method'], $pDataSimilar->getSameMarketingMethod());
 		$this->assertFalse($pDataSimilar->getSamePostalCode()); // missing -> bool

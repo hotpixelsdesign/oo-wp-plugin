@@ -70,6 +70,15 @@ class DefaultFilterBuilderSimilarEstates
 		$pDataListView = $pFilterConfiguration->getDataViewSimilarEstates();
 		$postalCode = $pFilterConfiguration->getPostalCode();
 
+
+		if ($pDataListView->getHideSoldEstates()) {
+			$filter['verkauft'] []= ['op' => 'not in', 'val' => 1];
+		}
+
+		if ($pDataListView->getHideReservedEstates()) {
+			$filter['reserviert'] []= ['op' => 'not in', 'val' => 1];
+		}
+
 		if ($pDataListView->getSameEstateKind()) {
 			$filter['objektart'] []= ['op' => '=', 'val' => $pFilterConfiguration->getEstateKind()];
 		}

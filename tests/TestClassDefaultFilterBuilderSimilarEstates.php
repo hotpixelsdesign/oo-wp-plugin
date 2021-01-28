@@ -54,6 +54,8 @@ class TestClassDefaultFilterBuilderSimilarEstates
 		parent::setUp();
 
 		$pDataViewEstates = new DataViewSimilarEstates();
+		$pDataViewEstates->setHideSoldEstates(false);
+		$pDataViewEstates->setHideReservedEstates(false);
 		$pDataViewEstates->setSameEstateKind(false);
 		$pDataViewEstates->setSameMarketingMethod(false);
 		$this->_pFilterConfigurationSimilarEstates = new FilterConfigurationSimilarEstates
@@ -77,6 +79,46 @@ class TestClassDefaultFilterBuilderSimilarEstates
 			'veroeffentlichen' => [
 				['op' => '=', 'val' => 1],
 			],
+		];
+		$this->assertEquals($expectation, $result);
+	}
+
+
+	/**
+	 *
+	 */
+
+	public function testBuildFilterHideSoldEstates()
+	{
+		$this->getDataViewSimilarEstates()->setHideSoldEstates(true);
+		$result = $this->_pDefaultFilterBuilderSimilarEstates->buildFilter();
+		$expectation = [
+			'veroeffentlichen' => [
+				['op' => '=', 'val' => 1],
+			],
+			'verkauft' => [
+				 ['op' => 'not in', 'val' => 1]
+			]
+		];
+		$this->assertEquals($expectation, $result);
+	}
+
+
+	/**
+	 *
+	 */
+
+	public function testBuildFilterHideReservedEstates()
+	{
+		$this->getDataViewSimilarEstates()->setHideReservedEstates(true);
+		$result = $this->_pDefaultFilterBuilderSimilarEstates->buildFilter();
+		$expectation = [
+			'veroeffentlichen' => [
+				['op' => '=', 'val' => 1],
+			],
+			'reserviert' => [
+				 ['op' => 'not in', 'val' => 1]
+			]
 		];
 		$this->assertEquals($expectation, $result);
 	}
@@ -175,6 +217,8 @@ class TestClassDefaultFilterBuilderSimilarEstates
 
 	public function testBuildFilterCombined()
 	{
+		$this->getDataViewSimilarEstates()->setHideSoldEstates(true);
+		$this->getDataViewSimilarEstates()->setHideReservedEstates(true);
 		$this->getDataViewSimilarEstates()->setSameEstateKind(true);
 		$this->getDataViewSimilarEstates()->setSameMarketingMethod(true);
 		$this->getDataViewSimilarEstates()->setSamePostalCode(true);
@@ -182,6 +226,12 @@ class TestClassDefaultFilterBuilderSimilarEstates
 		$expectation = [
 			'veroeffentlichen' => [
 				['op' => '=', 'val' => 1],
+			],
+			'verkauft' => [
+				 ['op' => 'not in', 'val' => 1]
+			],
+			'reserviert' => [
+				 ['op' => 'not in', 'val' => 1]
 			],
 			'vermarktungsart' => [
 				['op' => '=', 'val' => 'kauf'],

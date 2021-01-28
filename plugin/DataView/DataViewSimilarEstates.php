@@ -34,6 +34,12 @@ class DataViewSimilarEstates
 	implements DataView
 {
 	/** */
+	const FIELD_HIDE_SOLD = 'hide_sold';
+
+	/** */
+	const FIELD_HIDE_RESERVED = 'hide_reserved';
+
+	/** */
 	const FIELD_SAME_KIND = 'same_kind';
 
 	/** */
@@ -51,6 +57,12 @@ class DataViewSimilarEstates
 	/** */
 	const FIELD_SIMILAR_ESTATES_TEMPLATE = 'similar_estates_template';
 
+
+	/** @var bool */
+	private $_hideSoldEstates = true;
+
+	/** @var bool */
+	private $_hideReservedEstates = true;
 
 	/** @var bool */
 	private $_sameEstateKind = true;
@@ -72,6 +84,14 @@ class DataViewSimilarEstates
 
 
 	/** @param bool $sameEstateKind */
+	public function setHideSoldEstates(bool $hideSoldEstates)
+		{ $this->_hideSoldEstates = $hideSoldEstates; }
+
+	/** @param bool $sameEstateKind */
+	public function setHideReservedEstates(bool $hideReservedEstates)
+		{ $this->_hideReservedEstates = $hideReservedEstates; }
+
+	/** @param bool $sameEstateKind */
 	public function setSameEstateKind(bool $sameEstateKind)
 		{ $this->_sameEstateKind = $sameEstateKind; }
 
@@ -90,6 +110,14 @@ class DataViewSimilarEstates
 	/** @param int $recordsPerPage */
 	public function setRecordsPerPage(int $recordsPerPage)
 		{ $this->_recordsPerPage = $recordsPerPage; }
+
+	/** @return bool */
+	public function getHideSoldEstates(): bool
+		{ return $this->_hideSoldEstates; }
+
+	/** @return bool */
+	public function getHideReservedEstates(): bool
+		{ return $this->_hideReservedEstates; }
 
 	/** @return bool */
 	public function getSameEstateKind(): bool

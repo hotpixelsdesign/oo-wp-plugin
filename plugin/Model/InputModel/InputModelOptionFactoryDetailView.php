@@ -57,6 +57,12 @@ class InputModelOptionFactoryDetailView
 	const INPUT_FIELD_ENABLE_SIMILAR_ESTATES = DataDetailView::ENABLE_SIMILAR_ESTATES;
 
 	/** */
+	const INPUT_FIELD_SIMILAR_ESTATES_HIDE_SOLD = DataViewSimilarEstates::FIELD_HIDE_SOLD;
+
+	/** */
+	const INPUT_FIELD_SIMILAR_ESTATES_HIDE_RESERVED = DataViewSimilarEstates::FIELD_HIDE_RESERVED;
+
+	/** */
 	const INPUT_FIELD_SIMILAR_ESTATES_SAME_KIND = DataViewSimilarEstates::FIELD_SAME_KIND;
 
 	/** */
@@ -100,6 +106,12 @@ class InputModelOptionFactoryDetailView
 		],
 		self::INPUT_MOVIE_LINKS => [
 			self::KEY_TYPE => InputModelOption::SETTING_TYPE_STRING,
+		],
+		self::INPUT_FIELD_SIMILAR_ESTATES_HIDE_SOLD => [
+			self::KEY_TYPE => InputModelOption::SETTING_TYPE_BOOLEAN,
+		],
+		self::INPUT_FIELD_SIMILAR_ESTATES_HIDE_RESERVED => [
+			self::KEY_TYPE => InputModelOption::SETTING_TYPE_BOOLEAN,
 		],
 		self::INPUT_FIELD_SIMILAR_ESTATES_SAME_KIND => [
 			self::KEY_TYPE => InputModelOption::SETTING_TYPE_BOOLEAN,

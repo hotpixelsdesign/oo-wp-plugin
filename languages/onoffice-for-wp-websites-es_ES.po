@@ -782,24 +782,32 @@ msgstr "Enlace"
 msgid "Player"
 msgstr "Jugador"
 
-#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:302
+#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:301
+msgid "Hide Sold/Rented Estates"
+msgstr "Ocultar propiedades vendidas/alquiladas "
+
+#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:324
+msgid "Hide Reserved Estates"
+msgstr "Ocultar propiedades reservadas"
+
+#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:347
 msgid "Same Kind of Estate"
 msgstr "El mismo tipo de patrimonio"
 
-#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:325
+#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:370
 msgid "Same Marketing Method"
 msgstr "El mismo método de comercialización"
 
-#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:348
+#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:393
 msgid "Same Postal Code"
 msgstr "Mismo Código Postal"
 
-#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:371
+#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:416
 #: plugin/Model/InputModelBuilder/InputModelBuilderGeoRange.php:248
 msgid "Radius"
 msgstr "Radio"
 
-#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:394
+#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:439
 msgid "Amount of Estates"
 msgstr "Cantidad de Sucesiones"
 

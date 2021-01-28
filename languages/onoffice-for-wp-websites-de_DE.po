@@ -776,24 +776,32 @@ msgstr "Link"
 msgid "Player"
 msgstr "Player"
 
-#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:302
+#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:301
+msgid "Hide Sold/Rented Estates"
+msgstr "Verkaufte/Vermietete Immobilien ausblenden"
+
+#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:324
+msgid "Hide Reserved Estates"
+msgstr "Reservierte Immobilien ausblenden"
+
+#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:347
 msgid "Same Kind of Estate"
 msgstr "Gleiche Immobilienart"
 
-#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:325
+#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:370
 msgid "Same Marketing Method"
 msgstr "Gleiche Vermarktungsart"
 
-#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:348
+#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:393
 msgid "Same Postal Code"
 msgstr "Gleiche Postleitzahl"
 
-#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:371
+#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:416
 #: plugin/Model/InputModelBuilder/InputModelBuilderGeoRange.php:248
 msgid "Radius"
 msgstr "Umkreis"
 
-#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:394
+#: plugin/Model/FormModelBuilder/FormModelBuilderEstateDetailSettings.php:439
 msgid "Amount of Estates"
 msgstr "Anzahl Immobilien"
 

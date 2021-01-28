@@ -127,6 +127,10 @@ class DataDetailViewHandler
 	private function configureDataViewSimilarEstates(DataViewSimilarEstates $pDataViewSimilar,
 		array $row)
 	{
+		$pDataViewSimilar->setHideSoldEstates
+			($row[DataViewSimilarEstates::FIELD_HIDE_SOLD] ?? false);
+		$pDataViewSimilar->setHideReservedEstates
+			($row[DataViewSimilarEstates::FIELD_HIDE_RESERVED] ?? false);
 		$pDataViewSimilar->setSameEstateKind
 			($row[DataViewSimilarEstates::FIELD_SAME_KIND] ?? false);
 		$pDataViewSimilar->setSameMarketingMethod

@@ -45,6 +45,8 @@ class TestClassDataViewSimilarEstates
 	public function testDefaultValues()
 	{
 		$pDataViewSimilarEstates = new DataViewSimilarEstates();
+		$this->assertEquals(true, $pDataViewSimilarEstates->getHideSoldEstates());
+		$this->assertEquals(true, $pDataViewSimilarEstates->getHideReservedEstates());
 		$this->assertEquals(true, $pDataViewSimilarEstates->getSameEstateKind());
 		$this->assertEquals(true, $pDataViewSimilarEstates->getSameMarketingMethod());
 		$this->assertEquals(false, $pDataViewSimilarEstates->getSamePostalCode());
@@ -64,6 +66,10 @@ class TestClassDataViewSimilarEstates
 		$this->assertEquals(17, $pDataViewSimilarEstates->getRecordsPerPage());
 		$pDataViewSimilarEstates->setRadius(23);
 		$this->assertEquals(23, $pDataViewSimilarEstates->getRadius());
+		$pDataViewSimilarEstates->setHideSoldEstates(true);
+		$this->assertTrue($pDataViewSimilarEstates->getHideSoldEstates());
+		$pDataViewSimilarEstates->setHideReservedEstates(true);
+		$this->assertTrue($pDataViewSimilarEstates->getHideReservedEstates());
 		$pDataViewSimilarEstates->setSameEstateKind(true);
 		$this->assertTrue($pDataViewSimilarEstates->getSameEstateKind());
 		$pDataViewSimilarEstates->setSameMarketingMethod(true);

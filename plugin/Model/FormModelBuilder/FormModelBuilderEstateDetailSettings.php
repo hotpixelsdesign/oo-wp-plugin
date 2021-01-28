@@ -288,6 +288,51 @@ class FormModelBuilderEstateDetailSettings
 		}
 	}
 
+	/**
+	 *
+	 * @return InputModelDB
+	 *
+	 */
+
+	public function createInputModelSimilarEstateHideSold()
+	{
+		$pDataViewSimilarEstates = $this->_pDataDetailView->getDataViewSimilarEstates();
+
+		$labelHideSold = __('Hide Sold/Rented Estates', 'onoffice-for-wp-websites');
+
+		$pInputModelSimilarEstateHideSold = $this->_pInputModelDetailViewFactory->create
+			(InputModelOptionFactoryDetailView::INPUT_FIELD_SIMILAR_ESTATES_HIDE_SOLD, $labelHideSold);
+		$pInputModelSimilarEstateHideSold->setHtmlType(InputModelOption::HTML_TYPE_CHECKBOX);
+
+		$pInputModelSimilarEstateHideSold->setValuesAvailable(1);
+		$pInputModelSimilarEstateHideSold->setValue($pDataViewSimilarEstates->getHideSoldEstates());
+
+		return $pInputModelSimilarEstateHideSold;
+	}
+
+
+	/**
+	 *
+	 * @return InputModelDB
+	 *
+	 */
+
+	public function createInputModelSimilarEstateHideReserved()
+	{
+		$pDataViewSimilarEstates = $this->_pDataDetailView->getDataViewSimilarEstates();
+
+		$labelHideReserved = __('Hide Reserved Estates', 'onoffice-for-wp-websites');
+
+		$pInputModelSimilarEstateHideReserved = $this->_pInputModelDetailViewFactory->create
+			(InputModelOptionFactoryDetailView::INPUT_FIELD_SIMILAR_ESTATES_HIDE_RESERVED, $labelHideReserved);
+		$pInputModelSimilarEstateHideReserved->setHtmlType(InputModelOption::HTML_TYPE_CHECKBOX);
+
+		$pInputModelSimilarEstateHideReserved->setValuesAvailable(1);
+		$pInputModelSimilarEstateHideReserved->setValue($pDataViewSimilarEstates->getHideReservedEstates());
+
+		return $pInputModelSimilarEstateHideReserved;
+	}
+
 
 	/**
 	 *

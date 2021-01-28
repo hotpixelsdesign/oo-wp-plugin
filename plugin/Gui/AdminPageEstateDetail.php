@@ -295,6 +295,8 @@ class AdminPageEstateDetail
 		$pFormModelDocumentTypes->addInputModel($pInputModelMovieLinks);
 		$this->addFormModel($pFormModelDocumentTypes);
 
+		$pInputModelSimilarEstatesHideSold = $pFormModelBuilder->createInputModelSimilarEstateHideSold();
+		$pInputModelSimilarEstatesHideReserved = $pFormModelBuilder->createInputModelSimilarEstateHideReserved();
 		$pInputModelSimilarEstatesEstateKind = $pFormModelBuilder->createInputModelSimilarEstateKind();
 		$pInputModelSimilarEstatesMarketingMethod = $pFormModelBuilder->createInputModelSimilarEstateMarketingMethod();
 		$pInputModelSimilarEstatesSamePostalCode = $pFormModelBuilder->createInputModelSameEstatePostalCode();
@@ -309,6 +311,8 @@ class AdminPageEstateDetail
 		$pFormModelSimilarEstates->setGroupSlug(self::FORM_VIEW_SIMILAR_ESTATES);
 		$pFormModelSimilarEstates->setLabel(__('Similar Estates', 'onoffice-for-wp-websites'));
 		$pFormModelSimilarEstates->addInputModel($pInputModelSimilarEstatesActivated);
+		$pFormModelSimilarEstates->addInputModel($pInputModelSimilarEstatesHideSold);
+		$pFormModelSimilarEstates->addInputModel($pInputModelSimilarEstatesHideReserved);
 		$pFormModelSimilarEstates->addInputModel($pInputModelSimilarEstatesEstateKind);
 		$pFormModelSimilarEstates->addInputModel($pInputModelSimilarEstatesMarketingMethod);
 		$pFormModelSimilarEstates->addInputModel($pInputModelSimilarEstatesSamePostalCode);
