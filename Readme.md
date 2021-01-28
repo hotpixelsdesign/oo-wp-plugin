@@ -1,5 +1,5 @@
 # onOffice plugin for WordPress
-[![Build Status](https://travis-ci.org/onOfficeGmbH/oo-wp-plugin.svg?branch=master)](https://travis-ci.org/onOfficeGmbH/oo-wp-plugin)
+![Unit tests](https://github.com/onOfficeGmbH/oo-wp-plugin/workflows/Unit%20tests/badge.svg?branch=master)
 
 Integrate real estates, contact forms and contact persons from the onOffice Software into your WordPress website.
 
@@ -37,7 +37,7 @@ This will generate the directory /tmp/onoffice with the plugin data. If you need
 Request your own [onOffice trial version](https://onoffice.com/)
 
 Contact us by phone (+49 241 446860) or email (support@onoffice.com) for questions concerning onOffice enterprise edition.
-Consult apisupport@onoffice.com in regards to questions about our API or plugin development workflow.
+Please fill out this [form](https://wpplugindoc.onoffice.de/support-request/?lang=en) in regards to questions about our API or plugin development workflow.
 
 Proceed to the next step once you have got an API token and secret.
 

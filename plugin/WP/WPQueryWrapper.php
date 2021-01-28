@@ -40,7 +40,21 @@ class WPQueryWrapper
 
 	public function getWPQuery(): WP_Query
 	{
-		global $wp_query;
-		return $wp_query;
+		global $wp_query, $paged;
+		$wpquery = clone $wp_query;
+
+		if (get_query_var( 'paged' )) {
+			$paged = get_query_var('paged');
+		}
+		elseif ( get_query_var('page')) {
+			$paged = get_query_var( 'page' );
+		}
+		else {
+			$paged = 1;
+		}
+
+		$wpquery->set('paged', $paged);
+
+		return $wpquery;
 	}
 }
